@@ -1,12 +1,17 @@
 function binarySearch( sortedArray, value ){let left = 0;
+
   let right = sortedArray.length - 1;
   let middle = Math.floor( ( right + left ) / 2 );
+  
   while( middle >= left && middle <= right ){
+    
     if( sortedArray[ middle ] === value ){
       return middle;
+      
     }else if( sortedArray[ middle ] > value ){
       right = middle - 1;
       middle = Math.floor( (right + left) / 2 );
+      
     }else{
       left = middle + 1;
       middle = Math.floor( (right + left ) / 2);
